@@ -887,8 +887,8 @@ const sayHello = (person) => {
 
 # Reactとは
 
-- 平たく言えば、テンプレートエンジン
-- 仮装DOMを利用したHTMLの差分更新が特徴
+- 簡単にいえば、テンプレートエンジン
+- 仮想DOMを利用したHTMLの差分更新が特徴
 
 ![](./images/react.png?)
 
@@ -917,7 +917,7 @@ const sayHello = (person) => {
 # Reactを実行してみよう
 
 ```sh
-git clone https://github.com/steelydylan/react-sample.git .
+git clone https://github.com/steelydylan/react-sample.git
 npm install
 npm run start
 ```
@@ -962,7 +962,8 @@ reset() {
 # Reactを利用する際に便利なJSX記法
 
 JSXはReactを完結に記述するためにFacebook社によって開発された記法です。
-HTMLに似た書き方ですが、`class`を`className`と書いたり、若干、HTMLとは記述がことなります。
+
+HTMLに似た書き方ですが、`class`を`className`と書いたり、若干、HTMLとは記述が異なります。
 
 ---
 # Reactを利用する際に便利なJSX記法
@@ -991,7 +992,7 @@ const Modal = <div className="modal" tabIndex={-1} style={{display:'none'}}>
 ---
 # Reactのライフサイクル
 
-また、Reactにはライフサイクルというものがあり、ライフサイクルを覚えておくと、コンポーネントの生成時や削除時に処理を挟むことができます。
+また、Reactのコンポーネントにはライフサイクルというものがあり、ライフサイクルを覚えておくと、コンポーネントの生成時や削除時に処理を挟むことができます。
 
 ---
 
@@ -1134,7 +1135,7 @@ npm install react-redux --save
 ---
 # ReactとReduxを連携する
 
-下記のコードでは`mapStateToProps` `mapDispatchToProps`を`connect`することで、`Reducer`の`state`や`action`をAppコンポーネントのpropsで参照可能にしています。
+下記のコードでは`mapStateToProps` `mapDispatchToProps`を`connect`して、`Reducer`の`state`や`action`をAppコンポーネントのpropsで参照可能にしています。
 
 https://gist.github.com/steelydylan/6654d72c6c95f5b9a1fbeaa209e6d280
 
@@ -1276,7 +1277,7 @@ const flights = new ArcLayer({
 
 # Hamoware-VIS とは
 
-React Reduxを使って、deck.gl上での移動体の情報可視化や管理などを行うためのライブラリーで、主に名古屋大学河口研究室が中心になって開発しています。
+React Reduxを使って、deck.gl上での移動体の情報可視化や管理などを行うためのライブラリで、主に名古屋大学河口研究室が中心になって開発しています。
 先ほど紹介した以下のライブラリに依存しています。
 
 - react-map-gl
@@ -1297,8 +1298,9 @@ React Reduxを使って、deck.gl上での移動体の情報可視化や管理�
 ## Harmoware-VISを使うメリット
 
 1. 地理情報の時間更新の自動処理
-2. 時間コントロール系のコンポーネントを用意
-3. 移動体や停留所を表示するためのコンポーネントを用意
+2. 時間コントロール系のコンポーネント
+3. 移動体や停留所を表示するためのコンポーネント
+4. その他今後の研究開発の進展に応じた拡張
 
 ---
 
