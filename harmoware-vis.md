@@ -5,11 +5,14 @@
 }
 </style>
 
-# Harmoware-VIS のチュートリアルスライド
+
+# Harmoware-VIS のチュートリアル
 
 ---
 
-このスライドでは、現代のJavaScriptをおさらいし、Reactライブラリの利用から時空間情報可視化ライブラリである、Harmoware-VISの利用、開発に必要な知識を身に付けることができます。
+現代のJavaScriptをおさらいし、Reactライブラリの利用から
+時空間情報可視化ライブラリである Harmoware-VIS の利用、
+開発に必要な知識を身に付けることができます
 
 ---
 
@@ -32,7 +35,8 @@
 
 # 簡単なJavaScriptの歴史・変異
 
-モダンなJavaScriptを習得する上でJavaScriptが辿ってきた進化を押さえておく事は非常に重要です。
+モダンなJavaScriptを習得する上でJavaScriptが辿ってきた進化を
+押さえておく事は非常に重要です。
 なぜ今のようなエコシステムになっているのかをJavaScriptの歴史から学んでいきます。
 
 ---
@@ -126,7 +130,7 @@ $ npm install jquery --save
 
 ![](./images/es6.png)
 
-Node.jsの登場を受け、ECMAScriptもようやくモジュールシステムの仕様が入った「**ECMAScript2015（ES6）**」が2015年に誕生しました。他にも多くの変更行われ、このES6からが現在におけるECMAScriptのモダンなJavaScript環境といっていいでしょう。
+Node.jsの登場を受け、ECMAScriptにもようやくモジュールシステムの仕様が入った「**ECMAScript2015（ES6）**」が2015年に誕生しました。他にも多くの変更行われ、このES6からが現在におけるECMAScriptのモダンなJavaScript環境といっていいでしょう。
 
 ---
 
@@ -281,7 +285,7 @@ const hoge = arg1 => arg1 + 1; // 省略バージョン
 
 # ブラウザという特殊な実行環境
 
-ブラウザで動くJavaScriptは他言語と違い、実装するのは各ベンダー（IE, Chrome, FireFox, Safariなど）になります。また新しい仕様を動かすためには、サーバーサイドで動くアプリケーションと違い、各クライアント（一般人）がブラウザのバージョンアップを行う必要があります。
+ブラウザで動くJavaScriptの実行環境を実装するのは各ブラウザ（IE, Chrome, FireFox, Safariなど）毎のベンダー（Microsoft, Google, Mozilla, Appleなど)になります。また新しい仕様を動かすためには、サーバーサイドで動くアプリケーションと違い、各クライアント（一般ユーザ）がブラウザのバージョンアップを行う必要があります。
 
 ---
 
@@ -345,9 +349,9 @@ const hoge = arg1 => arg1 + 1; // 省略バージョン
 
 # AltJS - TypeScript
 
-ここまでのエコシステムを組み合わせれば、ECMAScript2015（ES6）以上のモダンな環境で動作させることはできます。しかしECMAScript自体、まだまだプログラム言語全体からみると成長過程な言語です。
+ここまでのエコシステムを組み合わせれば、ECMAScript2015（ES6）以上のモダンな環境で動作させることはできます。しかしECMAScript自体、まだまだプログラム言語全体からみると成長途中の言語です。
 
-そこでもう少し高度な文法で動作せたいという要望があり、 MicroSoftが開発している **「TypeScript」** というECMAScriptのスーパーセットとして動作するJavaScriptに変わる言語も出てきました。こちらもトランスパイラツールを使いJavaScriptとして動作させるようにします。
+そこでもう少し高度な文法で動作せたいという要望があり、 MicroSoftが開発している **「TypeScript」** というECMAScriptのスーパーセットとして動作するJavaScriptに変わる言語も出てきました。こちらもトランスパイラツールを使いJavaScriptとしてブラウザ上で動作します。
 
 * 静的型付
 * 名前空間
@@ -376,7 +380,7 @@ concat('A', 'B'); //works
 ```
 ---
 
-# まとめ - JavaScriptが辿ってきた歴史
+# JSまとめ - JavaScriptが辿ってきた歴史
 
 * もともとはブラウザで動く簡易な言語だった
 * 普及するにつれ、他言語と同じように扱いたいという要望がでてくる
@@ -385,7 +389,7 @@ concat('A', 'B'); //works
 
 ---
 
-# まとめ - モダン開発の環境・フロー
+# JSまとめ - モダン開発の環境・フロー
 
 ブラウザという特殊な環境のため、現状モダンな開発をするためには、様々なツールを組み合わせて開発を行う必要がある
 
@@ -400,11 +404,11 @@ concat('A', 'B'); //works
 
 ---
 
-# まとめ
+# JSまとめ
 
 モダンな環境で開発するためには、様々なツールと連携しないといけなく、またそのツールや仕様なども毎年どんどん進化していっています。日々情報をキャッチしモダンな環境を手に入れましょう。
 
-環境を作るだけでハードルの高いモダンJavaScript環境ですが、昔に比べたら圧倒的に開発しやすくなったことは確かです。一つ一つのツールにどのような歴史・意味があるかを考えると複雑な環境も理解する役にたつかと思います。
+環境を作るだけでハードルの高いモダンJavaScript環境ですが、昔に比べたら圧倒的に開発しやすくなったことは確かです。一つ一つのツールにどのような歴史・意味があるかを考えると複雑な環境も理解する役に立つかと思います。
 
 --- 
 
@@ -434,6 +438,8 @@ https://nodejs.org/en/download/
 ## Node.jsのバージョン管理ツール
 
 Macでは`nodebrew`や`ndenv`、Windowsでは`nodist`というツールを使ってNode.jsのバージョンコントロールができます。
+
+以下では、Mac, Windows それぞれについて、バージョン管理ツールを解説します。
 
 ---
 
@@ -666,7 +672,7 @@ $ npm install http-server --save-dev
 ---
 ## Node.jsのパッケージ管理ツール npm について
 
-`npm run serve`を実行すると下記のURLにて現在のディレクトリがドキュメントルートになった、簡易サーバーが立ち上がるはずです。
+`npm run serve`を実行すると下記のURLにて現在のディレクトリがドキュメントルートになった、簡易Webサーバーが立ち上がります。
 
 http://localhost:8080/
 
@@ -766,8 +772,8 @@ console.log('hello world');
 developmentモードと、buildモード
 
 ```js
-"dev": "webpack --mode development",
-"build": "webpack --mode production"
+"dev": "webpack --mode=development",
+"build": "webpack --mode=production"
 ```
 
 ---
@@ -792,8 +798,8 @@ npm i webpack-dev-server --save-dev
 ```
 
 ```sh
-"start": "webpack-dev-server --mode development --open",
-"build": "webpack --mode production"
+"start": "webpack-dev-server --mode=development --open",
+"build": "webpack --mode=production"
 ```
 
 ```sh
@@ -863,7 +869,7 @@ module.exports = {
 
 ---
 
-下記のような`JavaScript`を書いてみてください。`npm run build`を実行することで、`dist/main.js`にアロー関数が解決されたJavaScriptが生成されています。
+下記のような`JavaScript`を書いてみましょう。`npm run build`を実行すると、`dist/main.js`にアロー関数が解決されたJavaScriptが生成されています。
 
 index.js
 ```js
