@@ -1103,7 +1103,6 @@ Reduxを理解するのに一番重要になってくるのが`Store`という�
 ![](./images/redux.png)
 
 
-
 ---
 # Redux導入方法
 
@@ -1121,6 +1120,43 @@ ReduxのState管理の仕組みとReactのコンポーネントを紐づける�
 # ReactとReduxを連携する
 
 ![](./images/react-redux.png)
+
+---
+# ReactアプリケーションにReduxを導入するメリット
+
+例えば、コンポーネントの中に複数のコンポーネントが含まれているようなピラミッド型の構造が必要になってくるようなアプリケーションだと、データのやり取りに以下のようなcallbackが複数回必要になってきて冗長になってしまうケースがあります。
+
+```
+<ParentComponent hoge={this.state.hoge}>
+  <ChildComponent onChange={(changedValue) => {
+    this.setState({
+      hoge: changedValue
+    });
+  }} />
+</ParentComponent>
+```
+
+---
+
+# ReactアプリケーションにReduxを導入するメリット
+
+Reduxを使うことにより、アプリケーションに必要な`state`の更新を`Action`を介してどのコンポーネントからでも実行できるので、無駄なデータのやり取りのためのcallbackが不必要になります。
+
+---
+# ReactアプリケーションにReduxを導入するメリット
+
+以下が、孫コンポーネントから親コンポーネントを更新するイメージ図です。
+
+
+![](./images/redux-exp.png)
+
+
+---
+# ReactアプリケーションにReduxを導入するメリット
+
+全てのReactアプリケーションにReduxを導入した方がいいというわけではありません。むしろプロジェクトによってはReduxの導入で煩雑化してしまうこともあります。ですので、`State`がローカルのコンポーネントだけで完結していいものなのか、全体で管理した方がいい`State`なのか見極めが大事になってきます。
+
+
 
 
 
