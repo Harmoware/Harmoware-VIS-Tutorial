@@ -457,6 +457,12 @@ $ echo 'eval "$(ndenv init -)"' >> ~/.bash_profile
 $ exec $SHELL -l
 ```
 
+このままだと `ndenv install` が動かないため `node-build`プラグインをインストールする。
+
+```sh
+$ git clone https://github.com/riywo/node-build.git $(ndenv root)/plugins/node-build
+```
+
 ---
 ## Node.jsのバージョン管理ツール（Mac編）
 
@@ -573,16 +579,26 @@ C:\nodist list
   9.5.0
   9.11.2  (global: 9.11.2)
 ```
+
 ---
 
 ## Node.jsのパッケージ管理ツール npm について
 
-次は、Node.jsのパッケージ管理ツール`npm`の使い方をご紹介します。
-`npm`は元々は`Node.js`用のパッケージ管理ツールだったのですが、現在ではフロントエンド用のライブラリを管理するためのツールとしても使用されます。
-最近のJavaScriptプロジェクトでは、`npm init` コマンドより`package.json`というファイルを作成するのが一般的です。
+以降では、Node.jsのパッケージ管理ツール`npm`の使い方を説明します。
+
+Node.js をインストールとnpm も一緒にインストールされている場合が多いのですが、Node.js と npm のバージョンは、独立です。
+npmも最新版にしておくのが良いです。
+```sh
+$ npm update -g npm
+```
 
 ---
+
 ## Node.jsのパッケージ管理ツール npm について
+
+`npm`は元々は`Node.js`用のパッケージ管理ツールだったのですが、現在ではフロントエンド用のライブラリを管理するためのツールとしても使われます。
+JavaScriptプロジェクトを作成する際には、`npm init` コマンドより`package.json`というファイルを作成するのが一般的です。
+
 
 ```sh
 $ npm init
